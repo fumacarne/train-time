@@ -1,0 +1,11 @@
+body{
+    margin: 100px;
+    background-color: rgb(rgb(101, 181, 218), green, blue);
+    color: rgb(rgb(19, 18, 18), green, blue)
+}
+.display{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 100px;
+}

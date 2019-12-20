@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body>
+        <h2>Moment Date</h2>
+        <!-- container for Moment.js output -->
+        <div id="displayMoment"></div>
+
+<div class="display">
+    <p>Train Name</p>
+<input type="text" class="" id="train">
+<p>Destination</p>
+<input type="text" class="" id="destination">
+<p>Minutes Away</p>
+<input type="text" class="" id="frecuency">
+<p>Next Train </p>
+<input type="text" class="" id="nextTrain">
+<p>Frecuency</p>
+<input type="text" class="" id="minutes">
+<br>
+
+<button type="button" class="btn btn-secondary btn-lg">Choo Choo!</button>
+
+
+
+</div>
+
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="asset/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+
+    <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "AIzaSyATut6iwb6Zd6MSwuiJ2m1peFvMbUUP0AU",
+              authDomain: "cachipun-ba30e.firebaseapp.com",
+              databaseURL: "https://cachipun-ba30e.firebaseio.com",
+              projectId: "cachipun-ba30e",
+              storageBucket: "cachipun-ba30e.appspot.com",
+              messagingSenderId: "114241077975",
+              appId: "1:114241077975:web:2270c9fa81831b61536692"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+          </script>
+</body>
+</html>
