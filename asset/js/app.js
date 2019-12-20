@@ -1,4 +1,14 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyATut6iwb6Zd6MSwuiJ2m1peFvMbUUP0AU",
+    authDomain: "cachipun-ba30e.firebaseapp.com",
+    databaseURL: "https://cachipun-ba30e.firebaseio.com",
+    projectId: "cachipun-ba30e",
+    storageBucket: "cachipun-ba30e.appspot.com",
+    messagingSenderId: "114241077975",
+    appId: "1:114241077975:web:2270c9fa81831b61536692"};
 
+firebase.initializeApp(firebaseConfig);
+     
     // instantiate a moment object
     var NowMoment = moment().format('LTS');
     
@@ -11,8 +21,8 @@
     var eDisplayMoment = document.getElementById('displayMoment');
     eDisplayMoment.innerHTML = NowMoment;
 
+var text=document.querySelector("#train")
 
-    // Firebase set up 
 
 
 var db = firebase.firestore();
@@ -29,19 +39,26 @@ var db = firebase.firestore();
       console.log(proximallegada);
       console.log(frecuencia);
 
-    db.collection("Schedule").add({
+    db.collection("Schedule").doc(searchInput).set({
         Train: searchInput,
         Destination: destinos,
         Frecuency:frecuencia,
         Next_Arrival: proximallegada,
         Minutes_away:4,
-
-
     })
-    .then(function(docRef) {
-        console.log("Document written with ID: ", docRef.id);
+    .then(function() {
+        console.log("Document successfully written!");
     })
     .catch(function(error) {
-        console.error("Error adding document: ", error);
-    });
-})
+        console.error("Error writing document: ", error);
+
+    })
+    db.collection("Schedule").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            $(".show").append(`${doc.id} => ${doc.data()}`);
+            console.log("DEBUG")
+            count = doc.data().text;
+            text.textContent = count;
+            $(".show").append(count);
+        });
+    });;})
