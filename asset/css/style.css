@@ -1,7 +1,7 @@
 body{
     margin: 100px;
-    background-color: rgb(rgb(101, 181, 218), green, blue);
-    color: rgb(rgb(19, 18, 18), green, blue)
+    background-color:rgb(101, 181, 218);
+    color: rgb(19, 18, 18);
 }
 .display{
     display:flex;
