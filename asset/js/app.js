@@ -26,9 +26,8 @@ var db = firebase.firestore();
     $("button").on("click", function() {
         var searchInput = $("#train").val();
         var destinos = $('#destination').val();
- 
         var proximallegada = $('#nextTrain').val();
-        var frecuencia = $('#frecuency').val()
+        var frecuencia = $('#minutes').val();
       console.log(searchInput);
       console.log(destinos);
       console.log(proximallegada);
@@ -37,8 +36,9 @@ var db = firebase.firestore();
     db.collection("Schedule").doc(searchInput).set({
         Train: searchInput,
         Destination: destinos,
-        Frecuency:frecuencia,
         Next_Arrival: proximallegada,
+        Frecuency:frecuencia,
+       
     })
     .then(function() {
         console.log("Document successfully written!");
